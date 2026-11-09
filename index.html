@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مختبر ضغط الغاز | كيمياء 2-1</title>
+<style type="text/css">@font-face {font-family:'Tajawal';font-style:normal;font-weight:400;src:url(/cf-fonts/s/tajawal/5.2.7/arabic/400/normal.woff2);unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC,U+102E0-102FB,U+10E60-10E7E,U+10EC2-10EC4,U+10EFC-10EFF,U+1EE00-1EE03,U+1EE05-1EE1F,U+1EE21-1EE22,U+1EE24,U+1EE27,U+1EE29-1EE32,U+1EE34-1EE37,U+1EE39,U+1EE3B,U+1EE42,U+1EE47,U+1EE49,U+1EE4B,U+1EE4D-1EE4F,U+1EE51-1EE52,U+1EE54,U+1EE57,U+1EE59,U+1EE5B,U+1EE5D,U+1EE5F,U+1EE61-1EE62,U+1EE64,U+1EE67-1EE6A,U+1EE6C-1EE72,U+1EE74-1EE77,U+1EE79-1EE7C,U+1EE7E,U+1EE80-1EE89,U+1EE8B-1EE9B,U+1EEA1-1EEA3,U+1EEA5-1EEA9,U+1EEAB-1EEBB,U+1EEF0-1EEF1;font-display:swap;}@font-face {font-family:'Tajawal';font-style:normal;font-weight:400;src:url(/cf-fonts/s/tajawal/5.2.7/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Tajawal';font-style:normal;font-weight:500;src:url(/cf-fonts/s/tajawal/5.2.7/latin/500/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Tajawal';font-style:normal;font-weight:500;src:url(/cf-fonts/s/tajawal/5.2.7/arabic/500/normal.woff2);unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC,U+102E0-102FB,U+10E60-10E7E,U+10EC2-10EC4,U+10EFC-10EFF,U+1EE00-1EE03,U+1EE05-1EE1F,U+1EE21-1EE22,U+1EE24,U+1EE27,U+1EE29-1EE32,U+1EE34-1EE37,U+1EE39,U+1EE3B,U+1EE42,U+1EE47,U+1EE49,U+1EE4B,U+1EE4D-1EE4F,U+1EE51-1EE52,U+1EE54,U+1EE57,U+1EE59,U+1EE5B,U+1EE5D,U+1EE5F,U+1EE61-1EE62,U+1EE64,U+1EE67-1EE6A,U+1EE6C-1EE72,U+1EE74-1EE77,U+1EE79-1EE7C,U+1EE7E,U+1EE80-1EE89,U+1EE8B-1EE9B,U+1EEA1-1EEA3,U+1EEA5-1EEA9,U+1EEAB-1EEBB,U+1EEF0-1EEF1;font-display:swap;}@font-face {font-family:'Tajawal';font-style:normal;font-weight:700;src:url(/cf-fonts/s/tajawal/5.2.7/arabic/700/normal.woff2);unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC,U+102E0-102FB,U+10E60-10E7E,U+10EC2-10EC4,U+10EFC-10EFF,U+1EE00-1EE03,U+1EE05-1EE1F,U+1EE21-1EE22,U+1EE24,U+1EE27,U+1EE29-1EE32,U+1EE34-1EE37,U+1EE39,U+1EE3B,U+1EE42,U+1EE47,U+1EE49,U+1EE4B,U+1EE4D-1EE4F,U+1EE51-1EE52,U+1EE54,U+1EE57,U+1EE59,U+1EE5B,U+1EE5D,U+1EE5F,U+1EE61-1EE62,U+1EE64,U+1EE67-1EE6A,U+1EE6C-1EE72,U+1EE74-1EE77,U+1EE79-1EE7C,U+1EE7E,U+1EE80-1EE89,U+1EE8B-1EE9B,U+1EEA1-1EEA3,U+1EEA5-1EEA9,U+1EEAB-1EEBB,U+1EEF0-1EEF1;font-display:swap;}@font-face {font-family:'Tajawal';font-style:normal;font-weight:700;src:url(/cf-fonts/s/tajawal/5.2.7/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Tajawal';font-style:normal;font-weight:800;src:url(/cf-fonts/s/tajawal/5.2.7/arabic/800/normal.woff2);unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC,U+102E0-102FB,U+10E60-10E7E,U+10EC2-10EC4,U+10EFC-10EFF,U+1EE00-1EE03,U+1EE05-1EE1F,U+1EE21-1EE22,U+1EE24,U+1EE27,U+1EE29-1EE32,U+1EE34-1EE37,U+1EE39,U+1EE3B,U+1EE42,U+1EE47,U+1EE49,U+1EE4B,U+1EE4D-1EE4F,U+1EE51-1EE52,U+1EE54,U+1EE57,U+1EE59,U+1EE5B,U+1EE5D,U+1EE5F,U+1EE61-1EE62,U+1EE64,U+1EE67-1EE6A,U+1EE6C-1EE72,U+1EE74-1EE77,U+1EE79-1EE7C,U+1EE7E,U+1EE80-1EE89,U+1EE8B-1EE9B,U+1EEA1-1EEA3,U+1EEA5-1EEA9,U+1EEAB-1EEBB,U+1EEF0-1EEF1;font-display:swap;}@font-face {font-family:'Tajawal';font-style:normal;font-weight:800;src:url(/cf-fonts/s/tajawal/5.2.7/latin/800/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}</style>
+<style>
+:root{
+  --bg:#06121f; --bg2:#0b1d33; --card:rgba(255,255,255,.06); --border:rgba(125,211,252,.18);
+  --sky:#38bdf8; --sky2:#7dd3fc; --cyan:#22d3ee; --white:#f0f9ff; --muted:#94a3b8;
+  --ok:#4ade80; --bad:#f87171; --warm:#fb923c; --r:20px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',sans-serif;background:radial-gradient(circle at 20% 0%,#0e2a4a 0%,var(--bg) 55%);color:var(--white);line-height:1.8;overflow-x:hidden}
+.container{width:92%;max-width:1200px;margin:auto}
+a{color:inherit}
+button{font-family:inherit}
+
+/* خلفية الجزيئات */
+#bgDots{position:fixed;inset:0;z-index:-1;opacity:.35}
+
+/* التنقل */
+.nav{position:sticky;top:0;z-index:50;background:rgba(6,18,31,.75);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav .container{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+.logo{font-weight:800;font-size:1.3rem;text-decoration:none;color:var(--sky2)}
+.links{display:flex;gap:6px;list-style:none}
+.links a{text-decoration:none;padding:6px 14px;border-radius:50px;font-weight:500;transition:.3s}
+.links a:hover{background:rgba(56,189,248,.15);color:var(--sky2)}
+.burger{display:none;background:none;border:0;color:var(--sky2);font-size:1.8rem;cursor:pointer}
+.progress{position:absolute;bottom:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--sky));width:0}
+
+/* عام */
+section{padding:90px 0}
+.tag{display:inline-block;padding:5px 16px;border-radius:50px;background:rgba(56,189,248,.12);border:1px solid var(--border);color:var(--sky2);font-weight:700;font-size:.85rem;margin-bottom:12px}
+.title{font-size:2.2rem;font-weight:800;margin-bottom:6px}
+.title span{background:linear-gradient(90deg,var(--sky),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--muted);margin-bottom:40px;font-size:1.05rem}
+.head{text-align:center}
+.glass{background:var(--card);border:1px solid var(--border);border-radius:var(--r);backdrop-filter:blur(8px);padding:28px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.btn{background:linear-gradient(135deg,var(--sky),var(--cyan));color:#04223a;border:0;padding:11px 26px;border-radius:50px;font-weight:800;cursor:pointer;font-size:1rem;transition:.3s;text-decoration:none;display:inline-block}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(56,189,248,.35)}
+.btn.ghost{background:transparent;color:var(--sky2);border:1px solid var(--sky)}
+.ltr{direction:ltr;display:inline-block}
+label.ctrl{display:block;margin:14px 0 4px;font-weight:700;color:var(--sky2)}
+input[type=range]{width:100%;accent-color:var(--sky)}
+.reveal{opacity:0;transform:translateY(40px);transition:1s}
+.reveal.show{opacity:1;transform:none}
+
+/* الرئيسية */
+.hero{min-height:92vh;display:flex;align-items:center;padding:60px 0}
+.hero .container{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:3rem;line-height:1.35;font-weight:800;margin-bottom:16px}
+.hero p{color:#cbd5e1;font-size:1.15rem;margin-bottom:22px}
+.formula{font-size:1.6rem;font-weight:800;padding:16px 24px;border-radius:16px;background:rgba(56,189,248,.1);border:1px solid var(--border);display:inline-block;margin-bottom:24px}
+.formula b{color:var(--cyan)}
+.cube3d{perspective:900px;height:380px;display:flex;align-items:center;justify-content:center}
+.cube{width:200px;height:200px;position:relative;transform-style:preserve-3d;animation:spin 14s linear infinite}
+.face{position:absolute;width:200px;height:200px;border:2px solid var(--sky);background:rgba(56,189,248,.07);box-shadow:inset 0 0 40px rgba(56,189,248,.25)}
+.f1{transform:translateZ(100px)}.f2{transform:rotateY(180deg) translateZ(100px)}
+.f3{transform:rotateY(90deg) translateZ(100px)}.f4{transform:rotateY(-90deg) translateZ(100px)}
+.f5{transform:rotateX(90deg) translateZ(100px)}.f6{transform:rotateX(-90deg) translateZ(100px)}
+.mol{position:absolute;width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,var(--sky) 45%,#0369a1);box-shadow:0 0 12px var(--sky)}
+@keyframes spin{from{transform:rotateX(-20deg) rotateY(0)}to{transform:rotateX(-20deg) rotateY(360deg)}}
+
+/* الشروحات - تبويبات */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:26px}
+.tab{background:var(--card);border:1px solid var(--border);color:var(--white);padding:10px 20px;border-radius:50px;cursor:pointer;font-weight:700;transition:.3s}
+.tab.active,.tab:hover{background:linear-gradient(135deg,var(--sky),var(--cyan));color:#04223a}
+.panel{display:none;animation:fade .5s}
+.panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.panel h3{color:var(--sky2);font-size:1.5rem;margin-bottom:10px}
+.panel ul{padding-right:22px;color:#cbd5e1}
+.panel li{margin-bottom:8px}
+.keybox{margin-top:16px;padding:14px 18px;border-right:4px solid var(--cyan);background:rgba(34,211,238,.08);border-radius:10px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:16px}
+.step{padding:16px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid var(--border)}
+.step b{display:block;color:var(--cyan);font-size:1.4rem}
+
+/* المختبر 3D */
+.lab{display:grid;grid-template-columns:1.4fr 1fr;gap:26px}
+#lab3d{width:100%;height:440px;border-radius:var(--r);background:radial-gradient(circle,#0e2a4a,#050d18);border:1px solid var(--border);cursor:grab;display:block;touch-action:none}
+#lab3d:active{cursor:grabbing}
+.hint{color:var(--muted);font-size:.9rem;text-align:center;margin-top:8px}
+.gauge{position:relative;width:220px;height:130px;margin:10px auto 0}
+.gauge svg{width:100%;height:100%}
+.readout{text-align:center;font-size:1.8rem;font-weight:800;color:var(--cyan)}
+.readout small{display:block;font-size:.9rem;color:var(--muted);font-weight:500}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.stat{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:12px;padding:10px;text-align:center}
+.stat b{display:block;color:var(--sky2);font-size:1.2rem}
+.obs{margin-top:14px;padding:12px;border-radius:12px;background:rgba(251,146,60,.1);border:1px solid rgba(251,146,60,.3);color:#fed7aa;font-size:.95rem;min-height:60px}
+
+/* البارومتر والمانومتر */
+.inst{display:flex;justify-content:center;align-items:flex-end;gap:30px;height:260px;margin:20px 0}
+.tube{width:34px;height:230px;border:3px solid #64748b;border-bottom:0;border-radius:17px 17px 0 0;background:rgba(255,255,255,.05);display:flex;align-items:flex-end;overflow:hidden;position:relative}
+.hg{width:100%;background:linear-gradient(90deg,#64748b,#e2e8f0,#64748b);transition:height .6s}
+.dish{width:170px;height:34px;border:3px solid #64748b;border-top:0;border-radius:0 0 14px 14px;background:linear-gradient(90deg,#64748b,#e2e8f0,#64748b);position:absolute;bottom:0}
+.baroWrap{position:relative;width:170px;height:260px;display:flex;justify-content:center}
+.baroWrap .tube{position:absolute;bottom:22px}
+.scale{position:absolute;bottom:22px;left:0;height:230px;display:flex;flex-direction:column-reverse;justify-content:space-between;font-size:.7rem;color:var(--muted);direction:ltr}
+.city-btns{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.city-btns button{background:var(--card);border:1px solid var(--border);color:var(--white);padding:7px 14px;border-radius:50px;cursor:pointer;transition:.3s}
+.city-btns button.active,.city-btns button:hover{background:var(--sky);color:#04223a}
+.big{font-size:1.4rem;font-weight:800;color:var(--cyan);text-align:center}
+.uWrap{position:relative;width:200px;height:260px}
+.flask{position:absolute;right:-10px;bottom:120px;width:70px;height:70px;border-radius:50%;border:3px solid #64748b;background:rgba(56,189,248,.15);display:flex;align-items:center;justify-content:center;font-size:.8rem;overflow:hidden}
+.flask i{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--sky);animation:jit 1s infinite alternate}
+@keyframes jit{to{transform:translate(8px,-6px)}}
+.arm{position:absolute;bottom:26px;width:30px;height:200px;border:3px solid #64748b;border-bottom:0;background:rgba(255,255,255,.05);display:flex;align-items:flex-end;overflow:hidden}
+.arm.a1{right:40px}.arm.a2{left:40px}
+.ubot{position:absolute;bottom:0;left:40px;right:40px;height:30px;border:3px solid #64748b;border-top:0;border-radius:0 0 20px 20px;background:linear-gradient(90deg,#64748b,#e2e8f0,#64748b)}
+.diffLine{position:absolute;left:30px;right:30px;border-top:2px dashed var(--warm);transition:.6s}
+
+/* المحول */
+.conv{max-width:820px;margin:auto}
+.convRow{display:flex;gap:12px}
+.convRow input,.convRow select{flex:1;padding:14px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.06);color:var(--white);font-size:1.2rem;font-family:inherit;outline:none}
+.convRow select{flex:.4}
+.convRow select option{background:var(--bg2)}
+.results{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:20px}
+.res{padding:16px;border-radius:14px;text-align:center;background:rgba(56,189,248,.08);border:1px solid var(--border)}
+.res b{display:block;font-size:1.25rem;color:var(--cyan);direction:ltr;word-break:break-all}
+.res span{color:var(--muted);font-weight:700}
+.steps-out{margin-top:18px;padding:14px;border-radius:12px;background:rgba(0,0,0,.25);direction:ltr;text-align:left;font-family:monospace;color:var(--sky2);font-size:.95rem}
+table{width:100%;border-collapse:collapse;margin-top:26px;overflow:hidden;border-radius:14px}
+th,td{padding:12px;text-align:center;border-bottom:1px solid var(--border)}
+th{background:rgba(56,189,248,.18);color:var(--sky2)}
+
+/* الحياة */
+.lifeGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.flip{perspective:1000px;height:300px;cursor:pointer}
+.flip-in{position:relative;width:100%;height:100%;transition:transform .8s;transform-style:preserve-3d}
+.flip:hover .flip-in,.flip.on .flip-in{transform:rotateY(180deg)}
+.side{position:absolute;inset:0;backface-visibility:hidden;border-radius:var(--r);border:1px solid var(--border);padding:24px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.front{background:linear-gradient(160deg,rgba(56,189,248,.15),rgba(255,255,255,.03))}
+.front .ic{font-size:4rem}
+.front h3{font-size:1.3rem;margin-top:10px}
+.front small{color:var(--muted)}
+.back{background:linear-gradient(160deg,#0c4a6e,#082f49);transform:rotateY(180deg);font-size:.98rem;color:#e0f2fe}
+.mount{margin-top:30px}
+#altCanvas{width:100%;height:260px;display:block;border-radius:14px}
+
+/* الألعاب */
+.games{display:grid;gap:30px}
+.gameHead{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.gameHead h3{color:var(--sky2);font-size:1.4rem}
+.pill{padding:6px 16px;border-radius:50px;background:rgba(56,189,248,.12);border:1px solid var(--border);font-weight:700}
+.memory{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mcard{height:100px;perspective:600px;cursor:pointer}
+.mcard .in{position:relative;width:100%;height:100%;transition:.5s;transform-style:preserve-3d}
+.mcard.open .in,.mcard.done .in{transform:rotateY(180deg)}
+.mcard .s{position:absolute;inset:0;backface-visibility:hidden;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:800;text-align:center;padding:6px;font-size:1rem}
+.mcard .s1{background:linear-gradient(135deg,#0369a1,#0e7490);font-size:2rem}
+.mcard .s2{background:#e0f2fe;color:#075985;transform:rotateY(180deg);direction:ltr}
+.mcard.done .s2{background:#bbf7d0;color:#166534}
+.balloonArea{display:flex;flex-direction:column;align-items:center;gap:14px}
+.balloon{width:120px;height:150px;border-radius:50% 50% 48% 48%;background:radial-gradient(circle at 35% 30%,#fff,var(--sky) 30%,#0369a1);position:relative;transition:transform .3s;box-shadow:0 0 40px rgba(56,189,248,.4)}
+.balloon::after{content:'';position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#0369a1}
+.balloon.pop{animation:pop .4s forwards}
+@keyframes pop{to{transform:scale(2);opacity:0}}
+.target{font-size:1.2rem;font-weight:800}
+.ctrlBtns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.sortList{display:grid;gap:10px;max-width:520px;margin:auto}
+.sItem{padding:14px 18px;border-radius:14px;background:rgba(56,189,248,.1);border:1px solid var(--border);cursor:grab;font-weight:700;display:flex;justify-content:space-between;align-items:center;user-select:none;transition:.2s}
+.sItem.drag{opacity:.4}
+.sItem.right{border-color:var(--ok);background:rgba(74,222,128,.12)}
+.sItem.wrong{border-color:var(--bad);background:rgba(248,113,113,.12)}
+.sItem .ar{display:flex;gap:4px}
+.sItem .ar button{background:rgba(255,255,255,.1);border:0;color:var(--white);width:30px;height:30px;border-radius:8px;cursor:pointer}
+.msg{text-align:center;font-weight:800;margin-top:12px;min-height:30px}
+.msg.ok{color:var(--ok)}.msg.no{color:var(--bad)}
+
+.students{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 20px;padding-right:14px;border-right:3px solid rgba(56,189,248,.5)}
+.st-label{color:var(--sky2);font-size:.9rem;font-weight:700;letter-spacing:.3px}
+.st-name{padding:5px 18px;border-radius:50px;font-weight:700;font-size:.95rem;color:var(--sky2);background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.35)}
+@media(max-width:900px){.students{justify-content:center;border-right:0;padding-right:0}}
+footer{text-align:center;padding:30px;color:var(--muted);border-top:1px solid var(--border)}
+
+@media(max-width:900px){
+  .hero .container,.grid2,.lab{grid-template-columns:1fr}
+  .hero{text-align:center}.hero h1{font-size:2.2rem}
+  .cube3d{height:300px}
+  .burger{display:block}
+  .links{display:none;position:absolute;top:100%;right:0;left:0;flex-direction:column;background:var(--bg2);padding:16px;text-align:center}
+  .links.open{display:flex}
+  .memory{grid-template-columns:repeat(3,1fr)}
+  .convRow{flex-direction:column}
+  .title{font-size:1.8rem}
+}
+</style>
+</head>
+<body>
+<canvas id="bgDots"></canvas>
+
+<header class="nav">
+  <div class="container">
+    <a href="#home" class="logo">⚛️ مختبر ضغط الغاز</a>
+    <button class="burger" id="burger">☰</button>
+    <ul class="links" id="links">
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#learn">الشروحات</a></li>
+      <li><a href="#lab">المختبر 3D</a></li>
+      <li><a href="#tools">أدوات القياس</a></li>
+      <li><a href="#units">المحوّل</a></li>
+      <li><a href="#life">من الحياة</a></li>
+      <li><a href="#games">الألعاب</a></li>
+    </ul>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<!-- ========== الرئيسية ========== -->
+<section class="hero" id="home">
+  <div class="container">
+    <div>
+      <span class="tag">كيمياء 2-1 • الصف الثاني الثانوي • الفصل الأول</span>
+      <div class="students">
+        <span class="st-label">إعداد الطالبين</span>
+        <span class="st-name">ماجد هاني الحربي</span>
+        <span class="st-name">جميل هاني</span>
+      </div>
+      <h1>اكتشف سرّ <span style="color:var(--sky)">ضغط الغاز</span><br>بالتجربة واللعب</h1>
+      <p>جزيئات الغاز لا تتوقف عن الحركة! تصطدم بجدران الإناء ملايين المرات في كل ثانية، وكل تصادم يدفع الجدار بقوة صغيرة. مجموع هذه القوى على وحدة المساحة هو <b>ضغط الغاز</b>.</p>
+      <div class="formula"><b>P</b> = <b>F</b> ÷ <b>A</b></div>
+      <div><a href="#learn" class="btn">ابدأ الرحلة 🚀</a> <a href="#lab" class="btn ghost">جرّب المختبر</a></div>
+    </div>
+    <div class="cube3d"><div class="cube" id="cube">
+      <div class="face f1"></div><div class="face f2"></div><div class="face f3"></div>
+      <div class="face f4"></div><div class="face f5"></div><div class="face f6"></div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ========== الشروحات ========== -->
+<section id="learn">
+  <div class="container">
+    <div class="head reveal"><span class="tag">📚 الشروحات</span><h2 class="title">افهم الدرس <span>خطوة بخطوة</span></h2><p class="sub">اختر الموضوع الذي تريد التعلّم عنه</p></div>
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-t="p1">ما هو الضغط؟</button>
+      <button class="tab" data-t="p2">نظرية الحركة الجزيئية</button>
+      <button class="tab" data-t="p3">الضغط الجوي</button>
+      <button class="tab" data-t="p4">الوحدات</button>
+      <button class="tab" data-t="p5">كيف أحلّ مسألة تحويل؟</button>
+    </div>
+    <div class="glass reveal">
+      <div class="panel active" id="p1">
+        <h3>🎯 تعريف الضغط</h3>
+        <p>الضغط هو <b>القوة المؤثرة على وحدة المساحة</b>. لذلك يزيد الضغط إذا زادت القوة أو صغرت المساحة.</p>
+        <ul>
+          <li>لهذا السبب تغوص الإبرة الحادة بسهولة: مساحتها صغيرة جداً فيصبح الضغط كبيراً.</li>
+          <li>وتمشي الإبل على الرمال دون أن تغوص: خفافها عريضة فتوزّع وزنها على مساحة كبيرة.</li>
+        </ul>
+        <div class="keybox">💡 ضغط الغاز = مجموع قوى تصادم الجزيئات بالجدار ÷ مساحة الجدار</div>
+      </div>
+      <div class="panel" id="p2">
+        <h3>⚛️ نظرية الحركة الجزيئية</h3>
+        <ul>
+          <li>يتكوّن الغاز من جسيمات صغيرة جداً بينها مسافات كبيرة.</li>
+          <li>تتحرك الجسيمات حركة <b>عشوائية مستمرة</b> في خطوط مستقيمة.</li>
+          <li>التصادمات <b>مرنة</b>، فلا تفقد الجسيمات طاقتها الحركية الكلية.</li>
+          <li>تزداد سرعة الجسيمات بارتفاع درجة الحرارة.</li>
+        </ul>
+        <div class="steps">
+          <div class="step"><b>↑ عدد الجسيمات</b>تصادمات أكثر ← ضغط أكبر</div>
+          <div class="step"><b>↑ درجة الحرارة</b>سرعة أكبر ← تصادمات أقوى ← ضغط أكبر</div>
+          <div class="step"><b>↓ الحجم</b>مسافة أقصر للجدار ← تصادمات أكثر ← ضغط أكبر</div>
+        </div>
+        <div class="keybox">🧪 جرّب هذه العوامل الثلاثة بنفسك في <a href="#lab">المختبر ثلاثي الأبعاد</a>.</div>
+      </div>
+      <div class="panel" id="p3">
+        <h3>🌍 الضغط الجوي</h3>
+        <p>الغلاف الجوي يحيط بالأرض، وجزيئات الهواء تضغط على كل شيء حولنا. ينتج الضغط الجوي عن <b>وزن عمود الهواء</b> فوق السطح.</p>
+        <ul>
+          <li>قيمته عند مستوى سطح البحر = <span class="ltr">1 atm = 760 mmHg = 101.3 kPa</span></li>
+          <li>نحن لا نشعر به لأن ضغط السوائل داخل أجسامنا يعادله.</li>
+          <li>يقل الضغط الجوي كلما ارتفعنا عن سطح البحر.</li>
+        </ul>
+      </div>
+      <div class="panel" id="p4">
+        <h3>📏 وحدات قياس الضغط</h3>
+        <ul>
+          <li><b>الباسكال (Pa):</b> وحدة النظام الدولي SI، وتساوي <span class="ltr">1 N/m²</span>، وسُمّيت باسم العالم بليز باسكال.</li>
+          <li><b>الكيلوباسكال (kPa):</b> <span class="ltr">1 kPa = 1000 Pa</span>، لأن الباسكال وحدة صغيرة جداً.</li>
+          <li><b>الضغط الجوي (atm):</b> يساوي متوسط الضغط عند مستوى سطح البحر.</li>
+          <li><b>المليمتر زئبق (mmHg):</b> من البارومتر، أي ارتفاع عمود الزئبق.</li>
+          <li><b>التور (Torr):</b> تكريماً لتوريشيلي، و <span class="ltr">1 Torr = 1 mmHg</span></li>
+        </ul>
+        <div class="keybox"><span class="ltr">1 atm = 760 mmHg = 760 Torr = 101.3 kPa = 101325 Pa</span></div>
+      </div>
+      <div class="panel" id="p5">
+        <h3>✍️ طريقة حل مسألة تحويل</h3>
+        <p><b>مثال:</b> حوّل <span class="ltr">0.5 atm</span> إلى mmHg و kPa.</p>
+        <div class="steps">
+          <div class="step"><b>1</b>اكتب المعطى: <span class="ltr">0.5 atm</span></div>
+          <div class="step"><b>2</b>اختر معامل التحويل بحيث تُحذف الوحدة القديمة: <span class="ltr">760 mmHg / 1 atm</span></div>
+          <div class="step"><b>3</b>اضرب: <span class="ltr">0.5 × 760 = 380 mmHg</span></div>
+          <div class="step"><b>4</b>وبالمثل: <span class="ltr">0.5 × 101.3 = 50.65 kPa</span></div>
+        </div>
+        <div class="keybox">⚠️ الوحدة التي تريد التخلص منها تكون دائماً في <b>المقام</b>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== المختبر 3D ========== -->
+<section id="lab">
+  <div class="container">
+    <div class="head reveal"><span class="tag">🧪 المختبر الافتراضي</span><h2 class="title">إناء غاز <span>ثلاثي الأبعاد</span></h2><p class="sub">اسحب الإناء لتدويره، وغيّر العوامل وراقب مؤشر الضغط</p></div>
+    <div class="lab reveal">
+      <div>
+        <canvas id="lab3d"></canvas>
+        <p class="hint">🖱️ اسحب بالفأرة أو بإصبعك لتدوير الإناء • الجزيئات البرتقالية تصطدم الآن بالجدار</p>
+      </div>
+      <div class="glass">
+        <div class="gauge"><svg viewBox="0 0 220 130">
+          <path d="M20 115 A90 90 0 0 1 200 115" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="16" stroke-linecap="round"/>
+          <path id="gArc" d="M20 115 A90 90 0 0 1 200 115" fill="none" stroke="url(#gg)" stroke-width="16" stroke-linecap="round" stroke-dasharray="283" stroke-dashoffset="283"/>
+          <defs><linearGradient id="gg"><stop offset="0" stop-color="#22d3ee"/><stop offset=".6" stop-color="#38bdf8"/><stop offset="1" stop-color="#fb923c"/></linearGradient></defs>
+          <line id="needle" x1="110" y1="115" x2="110" y2="35" stroke="#fff" stroke-width="3" stroke-linecap="round" style="transform-origin:110px 115px"/>
+          <circle cx="110" cy="115" r="7" fill="#fff"/>
+        </svg></div>
+        <div class="readout"><span id="pVal" class="ltr">1.00 atm</span><small id="pSub" class="ltr">101.3 kPa • 760 mmHg</small></div>
+
+        <label class="ctrl">🔢 عدد الجزيئات: <span id="nL">40</span></label>
+        <input type="range" id="nS" min="10" max="120" value="40">
+        <label class="ctrl">🔥 درجة الحرارة: <span id="tL" class="ltr">300 K</span></label>
+        <input type="range" id="tS" min="100" max="600" value="300">
+        <label class="ctrl">📦 الحجم: <span id="vL">100%</span></label>
+        <input type="range" id="vS" min="40" max="100" value="100">
+
+        <div class="stats">
+          <div class="stat"><b id="hitL">0</b>تصادم / ثانية</div>
+          <div class="stat"><b id="spdL">متوسطة</b>سرعة الجزيئات</div>
+        </div>
+        <div class="obs" id="obs">👀 غيّر أحد العوامل وستظهر هنا ملاحظة علمية.</div>
+        <button class="btn ghost" id="resetLab" style="margin-top:12px;width:100%">إعادة الضبط</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== أدوات القياس ========== -->
+<section id="tools">
+  <div class="container">
+    <div class="head reveal"><span class="tag">🔬 أدوات القياس</span><h2 class="title">البارومتر <span>والمانومتر</span></h2><p class="sub">أداتان تعتمدان على الزئبق، لكل منهما وظيفة مختلفة</p></div>
+    <div class="grid2">
+      <div class="glass reveal">
+        <h3 style="color:var(--sky2)">🌡️ بارومتر توريشيلي (1643م)</h3>
+        <p style="color:#cbd5e1">ملأ العالم الإيطالي <b>إيفانجيليستا توريشيلي</b> أنبوباً زجاجياً بالزئبق وقلبه في وعاء زئبق. هبط الزئبق حتى ثبت عند ارتفاع يحمله <b>الضغط الجوي</b> المؤثر على سطح الوعاء. البارومتر يقيس <b>الضغط الجوي</b>.</p>
+        <div class="inst">
+          <div class="baroWrap">
+            <div class="scale"><span>0</span><span>200</span><span>400</span><span>600</span><span>800</span></div>
+            <div class="tube"><div class="hg" id="baroHg"></div></div>
+            <div class="dish"></div>
+          </div>
+        </div>
+        <p class="big"><span id="baroTxt" class="ltr">760 mmHg</span></p>
+        <p style="text-align:center;color:var(--muted);margin-bottom:10px">🗺️ سافر بالبارومتر بين مدن المملكة:</p>
+        <div class="city-btns" id="cities"></div>
+        <p id="cityInfo" style="text-align:center;margin-top:10px;color:#cbd5e1"></p>
+      </div>
+      <div class="glass reveal">
+        <h3 style="color:var(--sky2)">🧪 المانومتر</h3>
+        <p style="color:#cbd5e1">يقيس ضغط <b>غاز محصور</b> في دورق. يتصل الدورق بأنبوب على شكل <b>U</b> فيه زئبق. الغاز يدفع الزئبق، و<b>فرق الارتفاع</b> بين الذراعين يساوي ضغط الغاز بوحدة mmHg.</p>
+        <div class="inst">
+          <div class="uWrap">
+            <div class="flask" id="flask">غاز</div>
+            <div class="arm a1"><div class="hg" id="m1"></div></div>
+            <div class="arm a2"><div class="hg" id="m2"></div></div>
+            <div class="ubot"></div>
+          </div>
+        </div>
+        <label class="ctrl">ضغط الغاز في الدورق: <span id="mL" class="ltr">60 mmHg</span></label>
+        <input type="range" id="mS" min="0" max="160" value="60">
+        <p class="big" id="mTxt"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== المحول ========== -->
+<section id="units">
+  <div class="container">
+    <div class="head reveal"><span class="tag">🔄 أداة التحويل</span><h2 class="title">محوّل وحدات <span>الضغط</span></h2><p class="sub">اكتب أي قيمة وشاهد التحويل وخطوات الحل فوراً</p></div>
+    <div class="glass conv reveal">
+      <div class="convRow">
+        <input type="number" id="cIn" value="1" step="any">
+        <select id="cU">
+          <option>atm</option><option>kPa</option><option>Pa</option><option>mmHg</option><option>Torr</option>
+        </select>
+      </div>
+      <div class="results" id="cOut"></div>
+      <div class="steps-out" id="cSteps"></div>
+      <table>
+        <tr><th>الوحدة</th><th>الرمز</th><th>تعادل 1 atm</th></tr>
+        <tr><td>الضغط الجوي</td><td>atm</td><td class="ltr">1</td></tr>
+        <tr><td>كيلوباسكال</td><td>kPa</td><td class="ltr">101.3</td></tr>
+        <tr><td>باسكال</td><td>Pa</td><td class="ltr">101325</td></tr>
+        <tr><td>مليمتر زئبق</td><td>mmHg</td><td class="ltr">760</td></tr>
+        <tr><td>تور</td><td>Torr</td><td class="ltr">760</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ========== من الحياة ========== -->
+<section id="life">
+  <div class="container">
+    <div class="head reveal"><span class="tag">🌍 من حياتنا</span><h2 class="title">الضغط <span>حولنا</span></h2><p class="sub">مرّر الفأرة أو اضغط على البطاقة لتقلبها وتعرف السبب</p></div>
+    <div class="lifeGrid reveal">
+      <div class="flip"><div class="flip-in"><div class="side front"><div class="ic">🏔️</div><h3>لماذا يقل الضغط في الأعلى؟</h3><small>اقلب البطاقة</small></div>
+        <div class="side back">كلما ارتفعنا يقل سُمك عمود الهواء فوقنا ويقل وزنه، كما تقل كثافة الهواء فتقل التصادمات. لذلك ضغط أبها أقل من ضغط جدة.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="side front"><div class="ic">🚗</div><h3>ضغط إطارات السيارة</h3><small>اقلب البطاقة</small></div>
+        <div class="side back">الضغط المنخفض يزيد مساحة التلامس فيزيد استهلاك الوقود وسخونة الإطار. والضغط المرتفع يقلل التماسك وكفاءة الكوابح. وحرارة طرق الصيف ترفع ضغط الإطار، لذا يُقاس والإطار بارد.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="side front"><div class="ic">🍳</div><h3>قدر الضغط</h3><small>اقلب البطاقة</small></div>
+        <div class="side back">يحبس القدر البخار فيرتفع الضغط داخله، فيغلي الماء عند درجة أعلى من 100°C وينضج الطعام أسرع.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="side front"><div class="ic">✈️</div><h3>انسداد الأذن في الطائرة</h3><small>اقلب البطاقة</small></div>
+        <div class="side back">عند الإقلاع يقل ضغط المقصورة عن الضغط داخل الأذن الوسطى، فيدفع الهواء طبلة الأذن. البلع أو التثاؤب يساوي بين الضغطين.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="side front"><div class="ic">🥤</div><h3>الشفاطة (المصاصة)</h3><small>اقلب البطاقة</small></div>
+        <div class="side back">عند الشفط يقل الضغط داخل الشفاطة، فيدفع الضغط الجوي على سطح العصير السائل إلى أعلى نحو فمك.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="side front"><div class="ic">🎈</div><h3>البالون في الشمس</h3><small>اقلب البطاقة</small></div>
+        <div class="side back">الحرارة تزيد سرعة جزيئات الهواء داخل البالون، فتزيد قوة التصادمات ويرتفع الضغط حتى قد ينفجر.</div></div></div>
+    </div>
+    <div class="glass mount reveal">
+      <h3 style="color:var(--sky2);margin-bottom:6px">⛰️ تجربة: اصعد الجبل وراقب الضغط</h3>
+      <label class="ctrl">الارتفاع: <span id="altL" class="ltr">0 m</span> — الضغط: <span id="altP" class="ltr">760 mmHg</span></label>
+      <input type="range" id="altS" min="0" max="8848" value="0">
+      <canvas id="altCanvas"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ========== الألعاب ========== -->
+<section id="games">
+  <div class="container">
+    <div class="head reveal"><span class="tag">🎮 الألعاب</span><h2 class="title">تعلّم <span>وأنت تلعب</span></h2><p class="sub">ثلاث ألعاب تثبّت معلوماتك عن الوحدات والضغط</p></div>
+    <div class="games">
+
+      
+      <div class="glass reveal">
+        <div class="gameHead"><h3>🎈 لعبة البالون: اضبط الضغط على الهدف</h3>
+          <span class="pill">النقاط: <b id="bScore">0</b></span></div>
+        <div class="balloonArea">
+          <p class="target">🎯 الهدف: <span id="bTarget" class="ltr"></span></p>
+          <div class="balloon" id="balloon"></div>
+          <p class="big"><span id="bNow" class="ltr"></span></p>
+          <div class="ctrlBtns">
+            <button class="btn" data-d="20">نفخ +20 kPa</button>
+            <button class="btn" data-d="5">+5 kPa</button>
+            <button class="btn ghost" data-d="-5">−5 kPa</button>
+            <button class="btn ghost" data-d="-20">تفريغ −20 kPa</button>
+          </div>
+          <button class="btn" id="bCheck">✔ تحقّق</button>
+          <p class="msg" id="bMsg">انتبه! البالون ينفجر إذا تجاوز 250 kPa 💥</p>
+        </div>
+      </div>
+
+
+<footer>⚛️ مشروع مدرسي • كيمياء 2-1 • الصف الثاني الثانوي • الفصل الأول • درس ضغط الغاز<br>إعداد الطالبين: <b style="color:var(--sky2)">ماجد هاني الحربي</b> و <b style="color:var(--sky2)">جميل هاني</b></footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const fmt = (n,d=2) => (+n.toFixed(d)).toLocaleString('en-US',{maximumFractionDigits:d});
+
+/* ===== التنقل وشريط التقدم والظهور ===== */
+$('burger').onclick = () => $('links').classList.toggle('open');
+document.querySelectorAll('.links a').forEach(a => a.onclick = () => $('links').classList.remove('open'));
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  $('progress').style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+});
+const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('show')), {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ===== خلفية النقاط ===== */
+(() => {
+  const c = $('bgDots'), x = c.getContext('2d'); let d = [];
+  const size = () => { c.width = innerWidth; c.height = innerHeight; };
+  size(); addEventListener('resize', size);
+  for (let i = 0; i < 50; i++) d.push({x:Math.random()*innerWidth, y:Math.random()*innerHeight, vx:(Math.random()-.5)*.4, vy:(Math.random()-.5)*.4});
+  (function loop(){
+    x.clearRect(0,0,c.width,c.height);
+    d.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x<0||p.x>c.width) p.vx*=-1; if (p.y<0||p.y>c.height) p.vy*=-1;
+      x.beginPath(); x.arc(p.x,p.y,2,0,7); x.fillStyle='#38bdf8'; x.fill();
+    });
+    requestAnimationFrame(loop);
+  })();
+})();
+
+/* ===== مكعب الرئيسية (جزيئات داخل مكعب CSS 3D) ===== */
+(() => {
+  const cube = $('cube'), mols = [];
+  for (let i = 0; i < 14; i++) {
+    const m = document.createElement('div'); m.className = 'mol'; cube.appendChild(m);
+    mols.push({el:m, p:[0,1,2].map(()=>Math.random()*160-80), v:[0,1,2].map(()=>(Math.random()-.5)*3)});
+  }
+  (function loop(){
+    mols.forEach(m => {
+      for (let k=0;k<3;k++){ m.p[k]+=m.v[k]; if (Math.abs(m.p[k])>90){ m.v[k]*=-1; m.p[k]=Math.sign(m.p[k])*90; } }
+      m.el.style.transform = `translate3d(${m.p[0]+92}px,${m.p[1]+92}px,${m.p[2]}px)`;
+    });
+    requestAnimationFrame(loop);
+  })();
+})();
+
+/* ===== التبويبات ===== */
+document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
+  document.querySelectorAll('.tab,.panel').forEach(e => e.classList.remove('active'));
+  t.classList.add('active'); $(t.dataset.t).classList.add('active');
+});
+
+/* ===== المختبر ثلاثي الأبعاد ===== */
+(() => {
+  const cv = $('lab3d'), ctx = cv.getContext('2d');
+  let W, H, rotX = -0.4, rotY = 0.6, drag = false, lx, ly;
+  let parts = [], N = 40, T = 300, V = 1, hitsWindow = [], lastObs = '';
+  const resize = () => { W = cv.width = cv.clientWidth * devicePixelRatio; H = cv.height = cv.clientHeight * devicePixelRatio; };
+  resize(); addEventListener('resize', resize);
+
+  const speed = () => Math.sqrt(T / 300) * 0.012;
+  function make(n){
+    while (parts.length < n) {
+      const a = Math.random()*Math.PI*2, b = Math.acos(2*Math.random()-1), s = speed();
+      parts.push({p:[0,1,2].map(()=>(Math.random()*2-1)*V*.9), v:[Math.sin(b)*Math.cos(a)*s, Math.sin(b)*Math.sin(a)*s, Math.cos(b)*s], f:0});
+    }
+    parts.length = n;
+  }
+  function rescale(){ const s = speed(); parts.forEach(q => { const m = Math.hypot(...q.v)||1; q.v = q.v.map(c=>c/m*s); }); }
+  make(N);
+
+  function project(x,y,z){
+    let cy=Math.cos(rotY), sy=Math.sin(rotY), cx=Math.cos(rotX), sx=Math.sin(rotX);
+    let x1 = x*cy - z*sy, z1 = x*sy + z*cy;
+    let y1 = y*cx - z1*sx, z2 = y*sx + z1*cx;
+    const sc = Math.min(W,H)*0.32, f = 3.2/(3.2+z2);
+    return {x:W/2 + x1*sc*f, y:H/2 + y1*sc*f, s:f, z:z2};
+  }
+
+  const down = e => { drag = true; const t = e.touches?e.touches[0]:e; lx=t.clientX; ly=t.clientY; };
+  const move = e => { if(!drag) return; const t = e.touches?e.touches[0]:e; rotY += (t.clientX-lx)*0.01; rotX += (t.clientY-ly)*0.01; lx=t.clientX; ly=t.clientY; };
+  cv.addEventListener('mousedown',down); addEventListener('mousemove',move); addEventListener('mouseup',()=>drag=false);
+  cv.addEventListener('touchstart',down,{passive:true}); cv.addEventListener('touchmove',move,{passive:true}); addEventListener('touchend',()=>drag=false);
+
+  function pressure(){ return (N/40) * (T/300) / (V*V*V); } // P ∝ nT/V
+  function updateUI(){
+    const P = pressure();
+    $('pVal').textContent = fmt(P) + ' atm';
+    $('pSub').textContent = fmt(P*101.3,1) + ' kPa • ' + fmt(P*760,0) + ' mmHg';
+    const frac = Math.min(P/6, 1);
+    $('gArc').style.strokeDashoffset = 283 - 283*frac;
+    $('needle').style.transform = `rotate(${-90 + 180*frac}deg)`;
+    $('spdL').textContent = T<220?'بطيئة 🐢':T<400?'متوسطة':'سريعة 🚀';
+  }
+  function observe(msg){ if(msg!==lastObs){ lastObs=msg; $('obs').textContent = msg; } }
+
+  $('nS').oninput = e => { const old=N; N=+e.target.value; $('nL').textContent=N; make(N); updateUI();
+    observe(N>old ? '📈 زاد عدد الجزيئات ← زاد عدد التصادمات بالجدران ← ارتفع الضغط.' : '📉 قلّ عدد الجزيئات ← قلّت التصادمات ← انخفض الضغط.'); };
+  $('tS').oninput = e => { const old=T; T=+e.target.value; $('tL').textContent=T+' K'; rescale(); updateUI();
+    observe(T>old ? '🔥 ارتفعت الحرارة ← زادت سرعة الجزيئات ← تصادمات أكثر وأقوى ← ارتفع الضغط.' : '❄️ انخفضت الحرارة ← قلّت سرعة الجزيئات ← انخفض الضغط.'); };
+  $('vS').oninput = e => { const old=V; V=+e.target.value/100; $('vL').textContent=e.target.value+'%';
+    parts.forEach(q=>q.p=q.p.map(c=>Math.max(-V,Math.min(V,c)))); updateUI();
+    observe(V<old ? '📦 صغُر الحجم ← قصرت المسافة إلى الجدار ← تصادمات أكثر ← ارتفع الضغط.' : '📦 كبُر الحجم ← قلّت التصادمات ← انخفض الضغط.'); };
+  $('resetLab').onclick = () => { $('nS').value=40; $('tS').value=300; $('vS').value=100; N=40;T=300;V=1;
+    $('nL').textContent=40; $('tL').textContent='300 K'; $('vL').textContent='100%'; make(N); rescale(); updateUI(); observe('🔄 تمت إعادة الضبط.'); };
+
+  const edges = [[0,1],[1,3],[3,2],[2,0],[4,5],[5,7],[7,6],[6,4],[0,4],[1,5],[2,6],[3,7]];
+  function loop(){
+    ctx.clearRect(0,0,W,H);
+    const now = performance.now();
+    if (!drag) rotY += 0.003;
+    const verts = []; for (let i=0;i<8;i++) verts.push(project(i&1?V:-V, i&2?V:-V, i&4?V:-V));
+    // جدران شفافة
+    ctx.strokeStyle='rgba(56,189,248,.8)'; ctx.lineWidth=2*devicePixelRatio;
+    edges.forEach(([a,b])=>{ ctx.beginPath(); ctx.moveTo(verts[a].x,verts[a].y); ctx.lineTo(verts[b].x,verts[b].y); ctx.stroke(); });
+
+    parts.forEach(q => {
+      for (let k=0;k<3;k++){
+        q.p[k]+=q.v[k];
+        if (Math.abs(q.p[k])>V){ q.p[k]=Math.sign(q.p[k])*V; q.v[k]*=-1; q.f=12; hitsWindow.push(now); }
+      }
+    });
+    const pr = parts.map(q=>({q, s:project(...q.p)})).sort((a,b)=>b.s.z-a.s.z);
+    pr.forEach(({q,s}) => {
+      const r = 7*s.s*devicePixelRatio;
+      const g = ctx.createRadialGradient(s.x-r/3,s.y-r/3,1,s.x,s.y,r);
+      if (q.f>0){ g.addColorStop(0,'#fff'); g.addColorStop(1,'#fb923c'); q.f--; }
+      else { g.addColorStop(0,'#e0f2fe'); g.addColorStop(1,'#0284c7'); }
+      ctx.beginPath(); ctx.arc(s.x,s.y,r,0,7); ctx.fillStyle=g; ctx.fill();
+    });
+    hitsWindow = hitsWindow.filter(t=>now-t<1000);
+    $('hitL').textContent = hitsWindow.length;
+    requestAnimationFrame(loop);
+  }
+  updateUI(); loop();
+})();
+
+/* ===== البارومتر والمدن ===== */
+(() => {
+  // الضغط تقريبي حسب الارتفاع: P = 760 × e^(-h/8400)
+  const cities = [
+    {n:'جدة', h:12}, {n:'الدمام', h:10}, {n:'مكة المكرمة', h:277}, {n:'المدينة المنورة', h:608},
+    {n:'الرياض', h:612}, {n:'الطائف', h:1879}, {n:'أبها', h:2270}, {n:'جبل السودة', h:2999}
+  ];
+  const box = $('cities');
+  const go = (c, btn) => {
+    const p = 760*Math.exp(-c.h/8400);
+    $('baroHg').style.height = (p/800*100)+'%';
+    $('baroTxt').textContent = fmt(p,0)+' mmHg';
+    $('cityInfo').innerHTML = `📍 <b>${c.n}</b> — الارتفاع نحو <span class="ltr">${c.h} m</span> — الضغط ≈ <span class="ltr">${fmt(p/760,2)} atm</span> (قيمة تقريبية)`;
+    box.querySelectorAll('button').forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+  };
+  cities.forEach((c,i) => { const b=document.createElement('button'); b.textContent=c.n; b.onclick=()=>go(c,b); box.appendChild(b); if(!i) setTimeout(()=>go(c,b)); });
+})();
+
+/* ===== المانومتر ===== */
+(() => {
+  const flask = $('flask');
+  for (let i=0;i<8;i++){ const d=document.createElement('i'); d.style.left=Math.random()*55+'px'; d.style.top=Math.random()*55+'px'; d.style.animationDelay=Math.random()+'s'; flask.appendChild(d); }
+  const upd = () => {
+    const d = +$('mS').value;
+    $('mL').textContent = d+' mmHg';
+    $('m1').style.height = (50 - d/160*40)+'%';  // جهة الغاز ينخفض
+    $('m2').style.height = (50 + d/160*40)+'%';  // الجهة المفتوحة يرتفع
+    $('mTxt').innerHTML = `فرق الارتفاع = <span class="ltr">${d} mm</span> ⇐ ضغط الغاز = <span class="ltr">${d} mmHg = ${fmt(d/760*101.3,2)} kPa</span>`;
+    flask.querySelectorAll('i').forEach(i=>i.style.animationDuration=(1.2-d/200)+'s');
+  };
+  $('mS').oninput = upd; upd();
+})();
+
+/* ===== المحوّل ===== */
+(() => {
+  const toPa = {atm:101325, kPa:1000, Pa:1, mmHg:101325/760, Torr:101325/760};
+  const toAtm = {atm:'1 atm', kPa:'101.3 kPa', Pa:'101325 Pa', mmHg:'760 mmHg', Torr:'760 Torr'};
+  const nice = n => n===0?'0':(Math.abs(n)>=1e7||Math.abs(n)<1e-4)?n.toExponential(3):fmt(n,4);
+  const run = () => {
+    const v = parseFloat($('cIn').value), u = $('cU').value;
+    if (isNaN(v)) { $('cOut').innerHTML='<p style="grid-column:1/-1;text-align:center;color:var(--bad)">أدخل رقماً صحيحاً</p>'; $('cSteps').textContent=''; return; }
+    const pa = v*toPa[u];
+    $('cOut').innerHTML = Object.keys(toPa).filter(k=>k!==u).map(k=>`<div class="res"><b>${nice(pa/toPa[k])}</b><span>${k}</span></div>`).join('');
+    const tgt = u==='atm'?'mmHg':'atm';
+    $('cSteps').innerHTML = `Steps: ${v} ${u} × (${toAtm[tgt]} / ${toAtm[u]}) = ${nice(pa/toPa[tgt])} ${tgt}`;
+  };
+  $('cIn').oninput = run; $('cU').onchange = run; run();
+})();
+
+/* ===== تجربة الجبل ===== */
+(() => {
+  const cv = $('altCanvas'), x = cv.getContext('2d');
+  const draw = () => {
+    const W = cv.width = cv.clientWidth*devicePixelRatio, H = cv.height = cv.clientHeight*devicePixelRatio;
+    const h = +$('altS').value, p = 760*Math.exp(-h/8400);
+    $('altL').textContent = h+' m'; $('altP').textContent = fmt(p,0)+' mmHg';
+    const sky = x.createLinearGradient(0,0,0,H); sky.addColorStop(0,'#020617'); sky.addColorStop(1,'#0c4a6e');
+    x.fillStyle = sky; x.fillRect(0,0,W,H);
+    // جزيئات الهواء: أكثر كثافة في الأسفل
+    for (let i=0;i<350;i++){ const yy = H*(1-Math.pow(Math.random(),2.2)); x.fillStyle='rgba(125,211,252,.5)'; x.fillRect(Math.random()*W, yy, 2*devicePixelRatio, 2*devicePixelRatio); }
+    // الجبل
+    x.beginPath(); x.moveTo(0,H); x.lineTo(W*.5,H*.1); x.lineTo(W,H); x.closePath();
+    const mg = x.createLinearGradient(0,H*.1,0,H); mg.addColorStop(0,'#e2e8f0'); mg.addColorStop(.25,'#64748b'); mg.addColorStop(1,'#1e293b');
+    x.fillStyle = mg; x.fill();
+    // المتسلق
+    const t = h/8848, cx = W*.15 + (W*.5-W*.15)*t, cy = H - (H*.9)*t - 10*devicePixelRatio;
+    x.font = (24*devicePixelRatio)+'px sans-serif'; x.textAlign='center'; x.fillText('🧗', cx, cy);
+    x.fillStyle='#fff'; x.font = 'bold '+(14*devicePixelRatio)+'px Tajawal';
+    x.fillText(fmt(p/760,2)+' atm', cx, cy-28*devicePixelRatio);
+    x.textAlign='right'; x.fillStyle='#fed7aa';
+    x.fillText(h>5000?'⚠️ الهواء خفيف جداً! يحتاج المتسلقون إلى أكسجين':h>2000?'الضغط أقل بوضوح والماء يغلي تحت 100°C':'الضغط قريب من مستوى سطح البحر', W-12*devicePixelRatio, 24*devicePixelRatio);
+  };
+  $('altS').oninput = draw; addEventListener('resize', draw); draw();
+})();
+
+/* ===== لعبة الذاكرة ===== */
+(() => {
+  const pairs = [['1 atm','760 mmHg'],['1 atm','101.3 kPa'],['1 mmHg','1 Torr'],['1 kPa','1000 Pa'],['0.5 atm','380 mmHg'],['1 Pa','1 N/m²']];
+  let open = [], moves = 0, done = 0, lock = false;
+  function start(){
+    const deck = pairs.flatMap((p,i)=>[{t:p[0],id:i},{t:p[1],id:i}]).sort(()=>Math.random()-.5);
+    $('memory').innerHTML=''; open=[]; moves=0; done=0; $('moves').textContent=0; $('memMsg').textContent='';
+    deck.forEach(c => {
+      const el = document.createElement('div'); el.className='mcard';
+      el.innerHTML = `<div class="in"><div class="s s1">⚛️</div><div class="s s2">${c.t}</div></div>`;
+      el.onclick = () => {
+        if (lock || el.classList.contains('open') || el.classList.contains('done')) return;
+        el.classList.add('open'); open.push({el,c});
+        if (open.length===2){
+          moves++; $('moves').textContent=moves;
+          const [a,b] = open;
+          if (a.c.id===b.c.id){ a.el.classList.add('done'); b.el.classList.add('done'); open=[]; done++;
+            if (done===pairs.length) $('memMsg').textContent=`🎉 أحسنت! أنهيت اللعبة في ${moves} محاولة`; }
+          else { lock=true; setTimeout(()=>{ a.el.classList.remove('open'); b.el.classList.remove('open'); open=[]; lock=false; },900); }
+        }
+      };
+      $('memory').appendChild(el);
+    });
+  }
+  $('memReset').onclick = start; start();
+})();
+
+/* ===== لعبة البالون ===== */
+(() => {
+  let p = 100, target, score = 0;
+  const units = ['atm','mmHg','kPa'];
+  let tUnit;
+  function newTarget(){
+    const kpa = [50.65,101.3,151.95,202.6][Math.floor(Math.random()*4)];
+    tUnit = units[Math.floor(Math.random()*3)];
+    target = kpa;
+    const shown = tUnit==='atm'?fmt(kpa/101.3,1)+' atm':tUnit==='mmHg'?fmt(kpa/101.3*760,0)+' mmHg':fmt(kpa,1)+' kPa';
+    $('bTarget').textContent = shown;
+  }
+  function show(){
+    $('bNow').textContent = 'ضغط البالون: ' + fmt(p,1) + ' kPa';
+    $('balloon').style.transform = `scale(${0.5 + p/200})`;
+  }
+  function reset(){ p=100; $('balloon').classList.remove('pop'); show(); }
+  document.querySelectorAll('[data-d]').forEach(b => b.onclick = () => {
+    p = Math.max(0, p + +b.dataset.d);
+    if (p > 250){ $('balloon').classList.add('pop'); $('bMsg').className='msg no'; $('bMsg').textContent='💥 انفجر البالون! الضغط تجاوز 250 kPa'; setTimeout(reset,1200); return; }
+    show();
+  });
+  // نجعل القيم قابلة للوصول: نبدأ بـ 100 ونضيف ±5 و±20
+  $('bCheck').onclick = () => {
+    const diff = Math.abs(p - target);
+    if (diff <= 3){ score++; $('bScore').textContent=score; $('bMsg').className='msg ok';
+      $('bMsg').textContent=`✔ ممتاز! ${$('bTarget').textContent} ≈ ${fmt(target,1)} kPa`; newTarget(); }
+    else { $('bMsg').className='msg no';
+      $('bMsg').textContent=`✘ الهدف يساوي ${fmt(target,1)} kPa تقريباً. حوّل الوحدة ثم اضبط البالون (الفرق ${fmt(diff,1)} kPa)`; }
+  };
+  newTarget(); show();
+})();
+
+/* ===== لعبة الترتيب ===== */
+(() => {
+  const pool = [
+    ['0.25 atm',0.25],['300 mmHg',300/760],['50 kPa',50/101.3],['1 atm',1],['800 Torr',800/760],
+    ['150 kPa',150/101.3],['1520 mmHg',2],['0.8 atm',0.8],['101325 Pa',1.0001],['400 Torr',400/760],['2.5 atm',2.5],['30000 Pa',30000/101325]
+  ];
+  const list = $('sortList'); let dragged = null;
+  function render(items){
+    list.innerHTML=''; $('sMsg').textContent='';
+    items.forEach(it => {
+      const el = document.createElement('div'); el.className='sItem'; el.draggable=true; el.dataset.v=it[1];
+      el.innerHTML = `<span class="ltr">${it[0]}</span><span class="ar"><button>▲</button><button>▼</button></span>`;
+      const [up,dn] = el.querySelectorAll('button');
+      up.onclick = () => el.previousElementSibling && list.insertBefore(el, el.previousElementSibling);
+      dn.onclick = () => el.nextElementSibling && list.insertBefore(el.nextElementSibling, el);
+      el.ondragstart = () => { dragged=el; el.classList.add('drag'); };
+      el.ondragend = () => el.classList.remove('drag');
+      el.ondragover = e => { e.preventDefault(); const r=el.getBoundingClientRect();
+        list.insertBefore(dragged, e.clientY < r.top+r.height/2 ? el : el.nextSibling); };
+      list.appendChild(el);
+    });
+  }
+  function newRound(){
+    let pick; do { pick = [...pool].sort(()=>Math.random()-.5).slice(0,5); }
+    while (new Set(pick.map(p=>p[1].toFixed(3))).size<5 || pick.some(a=>pick.some(b=>a!==b&&Math.abs(a[1]-b[1])<0.03)));
+    render(pick);
+  }
+  $('sCheck').onclick = () => {
+    const els = [...list.children], vals = els.map(e=>+e.dataset.v), sorted = [...vals].sort((a,b)=>a-b);
+    let ok = true;
+    els.forEach((e,i)=>{ e.classList.remove('right','wrong'); const r = vals[i]===sorted[i]; e.classList.add(r?'right':'wrong'); ok = ok && r; });
+    $('sMsg').className = 'msg ' + (ok?'ok':'no');
+    $('sMsg').textContent = ok ? '🎉 ترتيب صحيح! حوّلت الوحدات بشكل ممتاز' : '✘ بعض العناصر في غير مكانها. نصيحة: حوّل كل القيم إلى atm أولاً';
+  };
+  $('sNew').onclick = newRound; newRound();
+})();
+</script>
+</body>
+</html>
